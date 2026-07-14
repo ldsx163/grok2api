@@ -19,7 +19,8 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: chenyme/grok2api
+  # Use the current repo owner/name so forks publish to their own GHCR namespace.
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   verify:
